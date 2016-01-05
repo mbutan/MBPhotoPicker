@@ -1,25 +1,85 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Wa9-Rf-Pjn">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="L0X-xt-rDS">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Wa9-Rf-Pjn" customClass="ViewController" customModule="MBPhotoPicker_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="KPU-2Q-c9v"/>
+                        <viewControllerLayoutGuide type="bottom" id="oUv-zF-Ag1"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="fHh-O7-1ax">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC6-5n-kH7">
+                                <rect key="frame" x="225" y="550" width="150" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0fh-Xr-Ulq"/>
+                                    <constraint firstAttribute="width" constant="150" id="tsS-fn-SYW"/>
+                                </constraints>
+                                <state key="normal" title="Photo Picker"/>
+                                <connections>
+                                    <action selector="didTapPhotoPicker:" destination="Wa9-Rf-Pjn" eventType="touchUpInside" id="wCS-XG-YFb"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GgM-UJ-E6z">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="GgM-UJ-E6z" secondAttribute="trailing" constant="-20" id="30X-OL-9re"/>
+                            <constraint firstItem="gC6-5n-kH7" firstAttribute="top" secondItem="KPU-2Q-c9v" secondAttribute="bottom" constant="730" id="44p-Tv-OTn">
+                                <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="GgM-UJ-E6z" firstAttribute="top" secondItem="fHh-O7-1ax" secondAttribute="topMargin" id="AX8-7C-sgp"/>
+                            <constraint firstItem="oUv-zF-Ag1" firstAttribute="top" secondItem="GgM-UJ-E6z" secondAttribute="bottom" id="Hvq-lc-O5b"/>
+                            <constraint firstItem="oUv-zF-Ag1" firstAttribute="top" secondItem="gC6-5n-kH7" secondAttribute="bottom" id="LVu-e8-Qbe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gC6-5n-kH7" secondAttribute="trailing" constant="-20" id="NFz-J7-G0l"/>
+                            <constraint firstItem="gC6-5n-kH7" firstAttribute="top" secondItem="KPU-2Q-c9v" secondAttribute="bottom" id="RDS-im-i35"/>
+                            <constraint firstItem="gC6-5n-kH7" firstAttribute="leading" secondItem="fHh-O7-1ax" secondAttribute="leadingMargin" constant="-20" id="Utl-ZX-raO"/>
+                            <constraint firstItem="GgM-UJ-E6z" firstAttribute="top" secondItem="gC6-5n-kH7" secondAttribute="bottom" constant="8" id="Xac-a5-0OO"/>
+                            <constraint firstItem="gC6-5n-kH7" firstAttribute="centerX" secondItem="fHh-O7-1ax" secondAttribute="centerX" id="nf5-Zo-bBh"/>
+                            <constraint firstItem="GgM-UJ-E6z" firstAttribute="leading" secondItem="fHh-O7-1ax" secondAttribute="leadingMargin" constant="-20" id="os7-v8-UY3"/>
+                            <constraint firstItem="gC6-5n-kH7" firstAttribute="top" secondItem="GgM-UJ-E6z" secondAttribute="bottom" id="zgF-Hi-VY4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Xac-a5-0OO"/>
+                                <exclude reference="44p-Tv-OTn"/>
+                                <exclude reference="NFz-J7-G0l"/>
+                                <exclude reference="RDS-im-i35"/>
+                                <exclude reference="Utl-ZX-raO"/>
+                                <exclude reference="Hvq-lc-O5b"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <exclude reference="AX8-7C-sgp"/>
+                                <include reference="Xac-a5-0OO"/>
+                                <exclude reference="44p-Tv-OTn"/>
+                                <include reference="RDS-im-i35"/>
+                                <exclude reference="zgF-Hi-VY4"/>
+                                <include reference="Hvq-lc-O5b"/>
+                                <exclude reference="LVu-e8-Qbe"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="photoButton" destination="gC6-5n-kH7" id="mPM-ty-LH7"/>
+                        <outlet property="previewImageView" destination="GgM-UJ-E6z" id="uXp-1k-oR4"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YMI-7F-OAO" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="339.75" y="414.75"/>
         </scene>
     </scenes>
 </document>

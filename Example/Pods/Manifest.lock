@@ -1,0 +1,14 @@
+PODS:
+  - MBPhotoPicker (0.1.0)
+
+DEPENDENCIES:
+  - MBPhotoPicker (from `../`)
+
+EXTERNAL SOURCES:
+  MBPhotoPicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MBPhotoPicker: c644c77fc79e96d805fadeefaf0ceb3da131d09b
+
+COCOAPODS: 0.39.0

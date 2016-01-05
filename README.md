@@ -2,7 +2,7 @@
 
 Easy and quick in implementation Photo Picker, based on Slack's picker.
 
-![picture alt](https://photos-5.dropbox.com/t/2/AACgNg9ecid4QM25hcmiMIqLDh_OBI2q_7I9Mmd-gcQUpA/12/200698441/png/32x32/1/_/1/2/Screen%20Shot%202016-01-05%20at%2020.41.45.png/ENf865cBGEUgAigC/cnJPs_8nq6F1P713PP2jcfaMagsXpZQ7BJPVDZN5khM?size=1280x960&size_mode=3 "MBPhotoPicker")
+![picture alt](https://github.com/mbutan/MBPhotoPicker/blob/master/Assets/screenshot.png "MBPhotoPicker")
 
 ## Requirements
 * iOS 8.0+

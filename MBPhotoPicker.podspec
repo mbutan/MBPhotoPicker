@@ -6,6 +6,7 @@ s.summary          = "Easy and quick in implementation Photo Picker, based on Sl
 
 s.description      = <<-DESC
 MBPhotoPicker is a simple Photo Picker based on used by Slack.
+In easy way allows you to take a photo, select from camera roll, use last photo taken or import from external apps.
 DESC
 
 s.homepage         = "https://github.com/mbutan/MBPhotoPicker"

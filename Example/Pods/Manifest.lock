@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MBPhotoPicker: c644c77fc79e96d805fadeefaf0ceb3da131d09b
+  MBPhotoPicker: 28371290413015db0beca52a6c95081b5614fa45
 
 COCOAPODS: 0.39.0

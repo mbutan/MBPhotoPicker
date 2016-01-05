@@ -7,59 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		131EBD9D86BFEE56E8C05A6513C49E77 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8DA5F566621FE80EFFD177B5DCB8E6CD /* fr.lproj */; };
-		172A20183FFCABF8A2F5AC3287DC2638 /* MBPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADD411DA6FD78CB60DA47F51CA5C1A /* MBPhotoPicker.swift */; };
-		2B17C2D2471A1D88108A6FB98F7A9A81 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1D90D31A416005B14F08AC6582EE680B /* en.lproj */; };
-		3D1FC86ED4436BD1089CC1A8C1F4DD53 /* MBPhotoPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC9E41B796A900DBBAA1E9B4F076750 /* MBPhotoPicker-dummy.m */; };
-		4BC0BD67B6BB46BCCCFFDB0EDF247B21 /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F0FC31B2B6CE002C66D6E39A9B1B99E9 /* zh-Hant.lproj */; };
-		4E424F0D6DD8378BB1DC20FAC06E6770 /* MBPhotoPicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1582BFC6CDCBBE9517914E3A49A7621A /* MBPhotoPicker.bundle */; };
-		51971F2D5BDA83B41E732C55A5EBA03C /* MBPhotoPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 015A481A7B172256F636C9576D506CD1 /* MBPhotoPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5816174AFA6B1AE49635D2397A8523A0 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E34B8C9DCE27F60A930D0C8361EE6227 /* zh-Hans.lproj */; };
-		73296BA69B72DBB466219C3D8FEB0095 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7608C478A0A507A8A337FCCCFAE4708E /* de.lproj */; };
-		7C7E57EBF175D4D080BDB6864FC51579 /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C57E150749E63D335F5683077257747A /* pt-PT.lproj */; };
+		0297DCE50EFEA2E5FD7BD2FDBE6AF310 /* MBPhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DADD411DA6FD78CB60DA47F51CA5C1A /* MBPhotoPicker.swift */; };
+		039453BCDF75166F3805B2E5AFBF59FB /* Localizable.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B5358FBEBC007BBABE7F09111140874 /* Localizable.bundle */; };
+		1FAE7740FB9D30300A686AF9D7AC0CB8 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E34B8C9DCE27F60A930D0C8361EE6227 /* zh-Hans.lproj */; };
+		2941F92C49A5EF80AADC4CB98AC7887C /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 8DA5F566621FE80EFFD177B5DCB8E6CD /* fr.lproj */; };
+		56CEB30080E5B9BE4DCD830D27685433 /* MBPhotoPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 015A481A7B172256F636C9576D506CD1 /* MBPhotoPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C7D0DCF6B7FE8AA5B1D323209EB779E /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7608C478A0A507A8A337FCCCFAE4708E /* de.lproj */; };
+		66C6250F4DD1E694128C7D2B05076486 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CC808E056B43625B8E67C7DAB08EC3B /* Localizable.strings */; };
+		70AB2B243B5F49AB219B3CB4AE7DFA8C /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3740D0D6130998D652855BB23DEF50E4 /* vi.lproj */; };
+		80A58CEA38370F066784443612BF580D /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 634723370DDF9C272C631A4675243DC4 /* ru.lproj */; };
 		81B58328E63EB246699938444B4D8D4C /* Pods-MBPhotoPicker_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AADBABBDE6F328764EEA64BF54D3B6A1 /* Pods-MBPhotoPicker_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A554A895E6EF0AD44B418D828FA6C380 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 634723370DDF9C272C631A4675243DC4 /* ru.lproj */; };
-		A8FAA6951672ECCDFBB8FC6A3A58A23B /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 997F11CC08407D73A94F483F2D1C3626 /* pt-BR.lproj */; };
-		B4E7BD182F7828BF6F5F5E9C84D586E8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2CC808E056B43625B8E67C7DAB08EC3B /* Localizable.strings */; };
-		B4EAFF22BBCE2C63FC7054BE4CBB01F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		C8E8F7E485662AC2375E398B68A68F32 /* vi.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3740D0D6130998D652855BB23DEF50E4 /* vi.lproj */; };
-		DC3AB759973DEAA846047F40D24E5990 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3879F9A7C06F1061F090EFFE67835 /* es.lproj */; };
+		972708555F1FE1A2F778686D87E56557 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1D90D31A416005B14F08AC6582EE680B /* en.lproj */; };
+		CA8FF109532A738FD49037F9B0BDA4B0 /* pt-PT.lproj in Resources */ = {isa = PBXBuildFile; fileRef = C57E150749E63D335F5683077257747A /* pt-PT.lproj */; };
 		DD3A9C7FC57EB89AEA8569FC56CE5DC6 /* Pods-MBPhotoPicker_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C905278F33E7E0C4BB8830330597662 /* Pods-MBPhotoPicker_Example-dummy.m */; };
 		E7662DD6CCC62A3B287073F41C41561B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		E821FE890AA11F5A84D1143955981A11 /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 997F11CC08407D73A94F483F2D1C3626 /* pt-BR.lproj */; };
+		EA2473B4B1F6A9BD0EA08737B6EE8654 /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 1FA3879F9A7C06F1061F090EFFE67835 /* es.lproj */; };
+		EF38BE515248A35314B2278C79D3B2DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		F8B812DCE9801BE7A9BA35D684FADF6A /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = F0FC31B2B6CE002C66D6E39A9B1B99E9 /* zh-Hant.lproj */; };
+		FCB063BE36E59953ABBA9251040C6C11 /* MBPhotoPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC9E41B796A900DBBAA1E9B4F076750 /* MBPhotoPicker-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		45AEAE60B0FA7669013751744DB70B6D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4E74007DD2DF621D0CF025CA9F2CE27D;
-			remoteInfo = "MBPhotoPicker-MBPhotoPicker";
-		};
 		6E69B3FCFBF34C3F8C78FA8E6C34C3DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = BCC1B89C09B56866BA47C2D27CB7DDCF;
+			remoteGlobalIDString = 4AE63FDCFBD6858ADB9BCDFA0A6AB768;
 			remoteInfo = MBPhotoPicker;
+		};
+		EDB4BDCF00B25EDE1DCB7B32F41382EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE6ACBB7F3ACAE4A4981D0303E11853D;
+			remoteInfo = "MBPhotoPicker-Localizable";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		015A481A7B172256F636C9576D506CD1 /* MBPhotoPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBPhotoPicker-umbrella.h"; sourceTree = "<group>"; };
-		1582BFC6CDCBBE9517914E3A49A7621A /* MBPhotoPicker.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBPhotoPicker.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D90D31A416005B14F08AC6582EE680B /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = en.lproj; sourceTree = "<group>"; };
 		1FA3879F9A7C06F1061F090EFFE67835 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = es.lproj; sourceTree = "<group>"; };
 		26BB9F56FD013A6724AF0435E9DE962E /* Pods-MBPhotoPicker_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MBPhotoPicker_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2B5358FBEBC007BBABE7F09111140874 /* Localizable.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Localizable.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CC808E056B43625B8E67C7DAB08EC3B /* Localizable.strings */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		3740D0D6130998D652855BB23DEF50E4 /* vi.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = vi.lproj; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		4ABA72CC1677DA9A1A6937399592C967 /* Pods-MBPhotoPicker_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MBPhotoPicker_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		4DADD411DA6FD78CB60DA47F51CA5C1A /* MBPhotoPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MBPhotoPicker.swift; sourceTree = "<group>"; };
-		4F4E82206C98584B346EB24BC7900218 /* MBPhotoPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBPhotoPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C905278F33E7E0C4BB8830330597662 /* Pods-MBPhotoPicker_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MBPhotoPicker_Example-dummy.m"; sourceTree = "<group>"; };
 		634723370DDF9C272C631A4675243DC4 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = ru.lproj; sourceTree = "<group>"; };
 		7608C478A0A507A8A337FCCCFAE4708E /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = de.lproj; sourceTree = "<group>"; };
+		78BE97CCC3A517A1545FD53C249FBCFF /* MBPhotoPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBPhotoPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		822317DD0C139405EC90CA60B158A281 /* Pods-MBPhotoPicker_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-MBPhotoPicker_Example.modulemap"; sourceTree = "<group>"; };
 		8641E7F999253926B9D71C02B9AA607C /* MBPhotoPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBPhotoPicker-prefix.pch"; sourceTree = "<group>"; };
 		8DA5F566621FE80EFFD177B5DCB8E6CD /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = fr.lproj; sourceTree = "<group>"; };
@@ -67,12 +67,12 @@
 		951CEC0D999A9E293AEC4F640223AF3F /* Pods-MBPhotoPicker_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MBPhotoPicker_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		997F11CC08407D73A94F483F2D1C3626 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = "pt-BR.lproj"; sourceTree = "<group>"; };
 		AADBABBDE6F328764EEA64BF54D3B6A1 /* Pods-MBPhotoPicker_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MBPhotoPicker_Example-umbrella.h"; sourceTree = "<group>"; };
-		AF77859F0D6E2FEAB1CDB49A65A8E659 /* Pods_MBPhotoPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MBPhotoPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B406F6A791E4C16BBC07CF8C44828C64 /* MBPhotoPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = MBPhotoPicker.modulemap; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C57E150749E63D335F5683077257747A /* pt-PT.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = "pt-PT.lproj"; sourceTree = "<group>"; };
 		D1E5C4C9595C4EBCE0E12170BFE25454 /* MBPhotoPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBPhotoPicker.xcconfig; sourceTree = "<group>"; };
 		DA43276847023E418C907683B9CAA8FF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCF7CAB2043405607EA563F865CD7EB0 /* Pods_MBPhotoPicker_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MBPhotoPicker_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E00DB15B2DE2F4D760ADDCF2E1F9893F /* Pods-MBPhotoPicker_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MBPhotoPicker_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E34B8C9DCE27F60A930D0C8361EE6227 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; path = "zh-Hans.lproj"; sourceTree = "<group>"; };
 		E47B15FBC9F6270F46E99DD84EC0BD68 /* Pods-MBPhotoPicker_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MBPhotoPicker_Example-frameworks.sh"; sourceTree = "<group>"; };
@@ -82,11 +82,11 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0C5912A0BAC38613E621644952ED064E /* Frameworks */ = {
+		5ED6727346BCDD1D41789B51ABA81042 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4EAFF22BBCE2C63FC7054BE4CBB01F9 /* Foundation.framework in Frameworks */,
+				EF38BE515248A35314B2278C79D3B2DA /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E2D3BDB15FC0F4A2EC7B7CA1556F6B26 /* Frameworks */ = {
+		9AB58B0A1408161E962ED137F9F50D88 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -171,7 +171,7 @@
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				E51F320E85C19CD66CC301D8E1524931 /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				A3D97CA78D0C30BFA751B20BEB5406A7 /* Products */,
+				EBFC1F9A1BE94D34A6A5FDE4CA096F32 /* Products */,
 				050CB19A7D21B57F873430C9A71F68E6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -182,16 +182,6 @@
 				BB6C26FA8EC699A9A8A9BBABD0D913CC /* Localizations */,
 			);
 			path = Pod;
-			sourceTree = "<group>";
-		};
-		A3D97CA78D0C30BFA751B20BEB5406A7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1582BFC6CDCBBE9517914E3A49A7621A /* MBPhotoPicker.bundle */,
-				4F4E82206C98584B346EB24BC7900218 /* MBPhotoPicker.framework */,
-				AF77859F0D6E2FEAB1CDB49A65A8E659 /* Pods_MBPhotoPicker_Example.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		BB6C26FA8EC699A9A8A9BBABD0D913CC /* Localizations */ = {
@@ -254,14 +244,24 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		EBFC1F9A1BE94D34A6A5FDE4CA096F32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2B5358FBEBC007BBABE7F09111140874 /* Localizable.bundle */,
+				78BE97CCC3A517A1545FD53C249FBCFF /* MBPhotoPicker.framework */,
+				DCF7CAB2043405607EA563F865CD7EB0 /* Pods_MBPhotoPicker_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		77F58FB53B50DB8706EDD85FBAF6574A /* Headers */ = {
+		184C3245128176389F910C365973B3F5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51971F2D5BDA83B41E732C55A5EBA03C /* MBPhotoPicker-umbrella.h in Headers */,
+				56CEB30080E5B9BE4DCD830D27685433 /* MBPhotoPicker-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,41 +276,41 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4E74007DD2DF621D0CF025CA9F2CE27D /* MBPhotoPicker-MBPhotoPicker */ = {
+		4AE63FDCFBD6858ADB9BCDFA0A6AB768 /* MBPhotoPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 562A52986D4869F53F7240F0E2C12541 /* Build configuration list for PBXNativeTarget "MBPhotoPicker-MBPhotoPicker" */;
+			buildConfigurationList = D490B2204C1F767291B7F2CD45508C4F /* Build configuration list for PBXNativeTarget "MBPhotoPicker" */;
 			buildPhases = (
-				75964EDA4AD9403BFF827DC569E705BB /* Sources */,
-				E2D3BDB15FC0F4A2EC7B7CA1556F6B26 /* Frameworks */,
-				43D9EA0F748BED1B3F9E9C18BC9AB94D /* Resources */,
+				AFE10C7C23A7F17BDD77CB06CDD57A42 /* Sources */,
+				5ED6727346BCDD1D41789B51ABA81042 /* Frameworks */,
+				E8AFE304DD46FDB7F79EE3EA1370DF5E /* Resources */,
+				184C3245128176389F910C365973B3F5 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = "MBPhotoPicker-MBPhotoPicker";
-			productName = "MBPhotoPicker-MBPhotoPicker";
-			productReference = 1582BFC6CDCBBE9517914E3A49A7621A /* MBPhotoPicker.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		BCC1B89C09B56866BA47C2D27CB7DDCF /* MBPhotoPicker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 447F18846C226F050055A361A4CC8A98 /* Build configuration list for PBXNativeTarget "MBPhotoPicker" */;
-			buildPhases = (
-				560AF20CA151E8496C125093DA035880 /* Sources */,
-				0C5912A0BAC38613E621644952ED064E /* Frameworks */,
-				D55DA4BC30CD1AD8FA32CEBBBA19B0D9 /* Resources */,
-				77F58FB53B50DB8706EDD85FBAF6574A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				35136CD30D7F90BB9387FD4F83230B73 /* PBXTargetDependency */,
+				383BF8089AB53B24010DF9A01C9C49A5 /* PBXTargetDependency */,
 			);
 			name = MBPhotoPicker;
 			productName = MBPhotoPicker;
-			productReference = 4F4E82206C98584B346EB24BC7900218 /* MBPhotoPicker.framework */;
+			productReference = 78BE97CCC3A517A1545FD53C249FBCFF /* MBPhotoPicker.framework */;
 			productType = "com.apple.product-type.framework";
+		};
+		BE6ACBB7F3ACAE4A4981D0303E11853D /* MBPhotoPicker-Localizable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CCAF885DE46377DB72652A4D1FE12682 /* Build configuration list for PBXNativeTarget "MBPhotoPicker-Localizable" */;
+			buildPhases = (
+				801313FBC424523F4D8A486AA8874A0C /* Sources */,
+				9AB58B0A1408161E962ED137F9F50D88 /* Frameworks */,
+				BC82F7B75102FE3E6E4E34545F47E306 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MBPhotoPicker-Localizable";
+			productName = "MBPhotoPicker-Localizable";
+			productReference = 2B5358FBEBC007BBABE7F09111140874 /* Localizable.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		F6DAB79FE97418663853F90445C9680C /* Pods-MBPhotoPicker_Example */ = {
 			isa = PBXNativeTarget;
@@ -327,7 +327,7 @@
 			);
 			name = "Pods-MBPhotoPicker_Example";
 			productName = "Pods-MBPhotoPicker_Example";
-			productReference = AF77859F0D6E2FEAB1CDB49A65A8E659 /* Pods_MBPhotoPicker_Example.framework */;
+			productReference = DCF7CAB2043405607EA563F865CD7EB0 /* Pods_MBPhotoPicker_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -347,56 +347,47 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = A3D97CA78D0C30BFA751B20BEB5406A7 /* Products */;
+			productRefGroup = EBFC1F9A1BE94D34A6A5FDE4CA096F32 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BCC1B89C09B56866BA47C2D27CB7DDCF /* MBPhotoPicker */,
-				4E74007DD2DF621D0CF025CA9F2CE27D /* MBPhotoPicker-MBPhotoPicker */,
+				4AE63FDCFBD6858ADB9BCDFA0A6AB768 /* MBPhotoPicker */,
+				BE6ACBB7F3ACAE4A4981D0303E11853D /* MBPhotoPicker-Localizable */,
 				F6DAB79FE97418663853F90445C9680C /* Pods-MBPhotoPicker_Example */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		43D9EA0F748BED1B3F9E9C18BC9AB94D /* Resources */ = {
+		BC82F7B75102FE3E6E4E34545F47E306 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73296BA69B72DBB466219C3D8FEB0095 /* de.lproj in Resources */,
-				2B17C2D2471A1D88108A6FB98F7A9A81 /* en.lproj in Resources */,
-				DC3AB759973DEAA846047F40D24E5990 /* es.lproj in Resources */,
-				131EBD9D86BFEE56E8C05A6513C49E77 /* fr.lproj in Resources */,
-				B4E7BD182F7828BF6F5F5E9C84D586E8 /* Localizable.strings in Resources */,
-				A8FAA6951672ECCDFBB8FC6A3A58A23B /* pt-BR.lproj in Resources */,
-				7C7E57EBF175D4D080BDB6864FC51579 /* pt-PT.lproj in Resources */,
-				A554A895E6EF0AD44B418D828FA6C380 /* ru.lproj in Resources */,
-				C8E8F7E485662AC2375E398B68A68F32 /* vi.lproj in Resources */,
-				5816174AFA6B1AE49635D2397A8523A0 /* zh-Hans.lproj in Resources */,
-				4BC0BD67B6BB46BCCCFFDB0EDF247B21 /* zh-Hant.lproj in Resources */,
+				5C7D0DCF6B7FE8AA5B1D323209EB779E /* de.lproj in Resources */,
+				972708555F1FE1A2F778686D87E56557 /* en.lproj in Resources */,
+				EA2473B4B1F6A9BD0EA08737B6EE8654 /* es.lproj in Resources */,
+				2941F92C49A5EF80AADC4CB98AC7887C /* fr.lproj in Resources */,
+				66C6250F4DD1E694128C7D2B05076486 /* Localizable.strings in Resources */,
+				E821FE890AA11F5A84D1143955981A11 /* pt-BR.lproj in Resources */,
+				CA8FF109532A738FD49037F9B0BDA4B0 /* pt-PT.lproj in Resources */,
+				80A58CEA38370F066784443612BF580D /* ru.lproj in Resources */,
+				70AB2B243B5F49AB219B3CB4AE7DFA8C /* vi.lproj in Resources */,
+				1FAE7740FB9D30300A686AF9D7AC0CB8 /* zh-Hans.lproj in Resources */,
+				F8B812DCE9801BE7A9BA35D684FADF6A /* zh-Hant.lproj in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D55DA4BC30CD1AD8FA32CEBBBA19B0D9 /* Resources */ = {
+		E8AFE304DD46FDB7F79EE3EA1370DF5E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E424F0D6DD8378BB1DC20FAC06E6770 /* MBPhotoPicker.bundle in Resources */,
+				039453BCDF75166F3805B2E5AFBF59FB /* Localizable.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		560AF20CA151E8496C125093DA035880 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D1FC86ED4436BD1089CC1A8C1F4DD53 /* MBPhotoPicker-dummy.m in Sources */,
-				172A20183FFCABF8A2F5AC3287DC2638 /* MBPhotoPicker.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		628FF82AC0C7895048DA2D024427206C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -405,26 +396,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		75964EDA4AD9403BFF827DC569E705BB /* Sources */ = {
+		801313FBC424523F4D8A486AA8874A0C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AFE10C7C23A7F17BDD77CB06CDD57A42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCB063BE36E59953ABBA9251040C6C11 /* MBPhotoPicker-dummy.m in Sources */,
+				0297DCE50EFEA2E5FD7BD2FDBE6AF310 /* MBPhotoPicker.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		35136CD30D7F90BB9387FD4F83230B73 /* PBXTargetDependency */ = {
+		383BF8089AB53B24010DF9A01C9C49A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "MBPhotoPicker-MBPhotoPicker";
-			target = 4E74007DD2DF621D0CF025CA9F2CE27D /* MBPhotoPicker-MBPhotoPicker */;
-			targetProxy = 45AEAE60B0FA7669013751744DB70B6D /* PBXContainerItemProxy */;
+			name = "MBPhotoPicker-Localizable";
+			target = BE6ACBB7F3ACAE4A4981D0303E11853D /* MBPhotoPicker-Localizable */;
+			targetProxy = EDB4BDCF00B25EDE1DCB7B32F41382EC /* PBXContainerItemProxy */;
 		};
 		BB4FA21CAF1AE1EEB61DD9169A886807 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = MBPhotoPicker;
-			target = BCC1B89C09B56866BA47C2D27CB7DDCF /* MBPhotoPicker */;
+			target = 4AE63FDCFBD6858ADB9BCDFA0A6AB768 /* MBPhotoPicker */;
 			targetProxy = 6E69B3FCFBF34C3F8C78FA8E6C34C3DD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -461,6 +461,45 @@
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2A1A81632D8BBD5BF6D8A4131C59F07A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1E5C4C9595C4EBCE0E12170BFE25454 /* MBPhotoPicker.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = Localizable;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		528425C64E268CC412D80DED78B469FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1E5C4C9595C4EBCE0E12170BFE25454 /* MBPhotoPicker.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBPhotoPicker/MBPhotoPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBPhotoPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBPhotoPicker/MBPhotoPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = MBPhotoPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
@@ -503,18 +542,6 @@
 			};
 			name = Debug;
 		};
-		569C587C882212CDA7F542D195223E79 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1E5C4C9595C4EBCE0E12170BFE25454 /* MBPhotoPicker.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = MBPhotoPicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
 		625CA81F8E0B7173D1B9BB512EFA1465 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 951CEC0D999A9E293AEC4F640223AF3F /* Pods-MBPhotoPicker_Example.debug.xcconfig */;
@@ -546,7 +573,7 @@
 			};
 			name = Debug;
 		};
-		8C41BB7D251922EE5C166E483E6CDE9A /* Release */ = {
+		8005B81050CE0E321FCE149F8B9B6919 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D1E5C4C9595C4EBCE0E12170BFE25454 /* MBPhotoPicker.xcconfig */;
 			buildSettings = {
@@ -563,15 +590,28 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/MBPhotoPicker/MBPhotoPicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = MBPhotoPicker;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		91D042BD92E3D144AB7926B88E8C2A0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1E5C4C9595C4EBCE0E12170BFE25454 /* MBPhotoPicker.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = Localizable;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
 		};
 		A91F0FBC16B4ACDCE4B31A8AF3D48C47 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -603,46 +643,6 @@
 			};
 			name = Release;
 		};
-		CDCC0F16B0042AD4D725A503E88E5508 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1E5C4C9595C4EBCE0E12170BFE25454 /* MBPhotoPicker.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = MBPhotoPicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		ECD68812C5FD3435C7FCAFE032035F8A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1E5C4C9595C4EBCE0E12170BFE25454 /* MBPhotoPicker.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/MBPhotoPicker/MBPhotoPicker-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MBPhotoPicker/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MBPhotoPicker/MBPhotoPicker.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = MBPhotoPicker;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -664,20 +664,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		447F18846C226F050055A361A4CC8A98 /* Build configuration list for PBXNativeTarget "MBPhotoPicker" */ = {
+		CCAF885DE46377DB72652A4D1FE12682 /* Build configuration list for PBXNativeTarget "MBPhotoPicker-Localizable" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ECD68812C5FD3435C7FCAFE032035F8A /* Debug */,
-				8C41BB7D251922EE5C166E483E6CDE9A /* Release */,
+				91D042BD92E3D144AB7926B88E8C2A0F /* Debug */,
+				2A1A81632D8BBD5BF6D8A4131C59F07A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		562A52986D4869F53F7240F0E2C12541 /* Build configuration list for PBXNativeTarget "MBPhotoPicker-MBPhotoPicker" */ = {
+		D490B2204C1F767291B7F2CD45508C4F /* Build configuration list for PBXNativeTarget "MBPhotoPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				569C587C882212CDA7F542D195223E79 /* Debug */,
-				CDCC0F16B0042AD4D725A503E88E5508 /* Release */,
+				8005B81050CE0E321FCE149F8B9B6919 /* Debug */,
+				528425C64E268CC412D80DED78B469FE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

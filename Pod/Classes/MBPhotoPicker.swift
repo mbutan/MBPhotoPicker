@@ -44,11 +44,15 @@ public class MBPhotoPicker: NSObject {
     /**
      Using for iPad devices
      */
+    public var presentPhotoLibraryInPopover = false
+    
     public var popoverTarget: UIView?
     
     public var popoverRect: CGRect?
     
     public var popoverDirection: UIPopoverArrowDirection = .Any
+    
+    var popoverController: UIPopoverController?
     
     /**
      List of callbacks variables
@@ -166,7 +170,18 @@ public class MBPhotoPicker: NSObject {
                 imagePicker.cameraFlashMode = self.cameraFlashMode
             }
         }
-        topController.presentViewController(imagePicker, animated: true, completion: nil)
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad && sourceType == .PhotoLibrary && self.presentPhotoLibraryInPopover {
+            guard let popover = self.popoverTarget else {
+                self.errorCompletionHandler?(error: .PopoverTarget)
+                return;
+            }
+            
+            self.popoverController = UIPopoverController(contentViewController: imagePicker)
+            let rect = self.popoverRect ?? CGRectZero
+            self.popoverController?.presentPopoverFromRect(rect, inView: popover, permittedArrowDirections: self.popoverDirection, animated: true)
+        } else {
+            topController.presentViewController(imagePicker, animated: true, completion: nil)
+        }
     }
     
     func photoHandler(image: UIImage!) -> Void {
@@ -203,10 +218,12 @@ extension MBPhotoPicker: UIImagePickerControllerDelegate, UINavigationController
             self.errorCompletionHandler?(error: .Other)
         }
         picker.dismissViewControllerAnimated(true, completion: nil)
+        self.popoverController = nil
     }
     
     public func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         picker.dismissViewControllerAnimated(true, completion: nil)
+        self.popoverController = nil
     }
 }
 

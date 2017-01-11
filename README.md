@@ -6,7 +6,7 @@ Easy and quick in implementation Photo Picker, based on Slack's picker.
 
 ## Requirements
 * iOS 8.0+
-* Swift 1.0+
+* Swift 3
 * ARC
 * To happy full functionality, expand your Xcode's captabilities of iCloud entitlement (see at the attached example, or read more about [here](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html))
 
@@ -25,21 +25,21 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 For a quick start see the code below.
 ```
-var photo: MBPhotoPicker? = MBPhotoPicker()
-photo?.photoCompletionHandler = { (image: UIImage!) -> Void in
+var photo: MBPhotoPicker = MBPhotoPicker()
+photo.photoCompletionHandler = { (image: UIImage!) -> Void in
 print("Selected image")
 }
-photo?.cancelCompletionHandler = {
+photo.cancelCompletionHandler = {
 print("Cancel Pressed")
 }
-photo?.errorCompletionHandler = { (error: MBPhotoPicker.ErrorPhotoPicker!) -> Void in
+photo.errorCompletionHandler = { (error: MBPhotoPicker.ErrorPhotoPicker) -> Void in
 print("Error: \(error.rawValue)")
 }
-photo?.present(self)
+photo.present(self)
 ```
 
 To disable import image from external apps, just type code:
-```photo?.disableEntitlements = true```
+```photo.disableEntitlements = true```
 
 Library supports bunch of localizated strings, to override translations just use one of available variables:
 ```
@@ -55,6 +55,7 @@ actionTitleLibrary
 ## Author
 
 Marcin Butanowicz, m.butan@gmail.com
+Andrea Antonioni, andreaantonioni97@gmail.com (Contributor)
 
 ## License
 

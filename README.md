@@ -24,7 +24,7 @@ pod "MBPhotoPicker"
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 For a quick start see the code below.
-```
+``` swift
 var photo: MBPhotoPicker = MBPhotoPicker()
 photo.photoCompletionHandler = { (image: UIImage!) -> Void in
 print("Selected image")
@@ -39,10 +39,14 @@ photo.present(self)
 ```
 
 To disable import image from external apps, just type code:
-```photo.disableEntitlements = true```
+
+```swift
+photo.disableEntitlements = true
+```
 
 Library supports bunch of localizated strings, to override translations just use one of available variables:
-```
+
+``` swift
 alertTitle
 alertMessage
 actionTitleCancel
@@ -55,6 +59,7 @@ actionTitleLibrary
 ## Author
 
 Marcin Butanowicz, m.butan@gmail.com
+
 Andrea Antonioni, andreaantonioni97@gmail.com (Contributor)
 
 ## License

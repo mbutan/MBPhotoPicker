@@ -1,7 +1,7 @@
 source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
-target 'MBPhotoPicker_Example', :exclusive => true do
+target 'MBPhotoPicker_Example' do
     pod "MBPhotoPicker", :path => "../"
 end
 

@@ -63,7 +63,7 @@ open class MBPhotoPicker: NSObject {
     
     open var cancelCompletionHandler: (() -> Void)?
     
-    open var errorCompletionHandler: ((_ error: ErrorPhotoPicker?) -> Void)?
+    open var errorCompletionHandler: ((_ error: ErrorPhotoPicker) -> Void)?
     
 
     // MARK: Error's definition

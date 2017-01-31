@@ -5,7 +5,7 @@ Easy and quick in implementation Photo Picker, based on Slack's picker.
 ![picture alt](https://github.com/mbutan/MBPhotoPicker/blob/master/Assets/screenshot.png "MBPhotoPicker")
 
 ## Requirements
-* iOS 8.0+
+* iOS 9.0+
 * Swift 3
 * ARC
 * To happy full functionality, expand your Xcode's captabilities of iCloud entitlement (see at the attached example, or read more about [here](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html))

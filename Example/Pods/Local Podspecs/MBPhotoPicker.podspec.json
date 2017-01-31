@@ -1,6 +1,6 @@
 {
   "name": "MBPhotoPicker",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "summary": "Easy and quick in implementation Photo Picker, based on Slack's picker.",
   "description": "\"MBPhotoPicker is a simple Photo Picker based on used by Slack. In easy way allows you to take a photo, select from camera roll, use last photo taken or import from external apps.\"",
   "homepage": "https://github.com/mbutan/MBPhotoPicker",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/mbutan/MBPhotoPicker.git",
-    "tag": "0.2.1"
+    "tag": "0.2.2"
   },
   "platforms": {
     "ios": "8.0"

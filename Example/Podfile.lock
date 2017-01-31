@@ -1,5 +1,5 @@
 PODS:
-  - MBPhotoPicker (0.2.1)
+  - MBPhotoPicker (0.2.2)
 
 DEPENDENCIES:
   - MBPhotoPicker (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MBPhotoPicker: 6054a7109ad84346be9a2cd08527801c18fe25c4
+  MBPhotoPicker: dc38a4484834dc0fe31ee28d9a5464ea270d7b3b
 
 PODFILE CHECKSUM: dba2c7949354289fecde9ecdd430f4b955dcb36e
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

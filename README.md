@@ -26,13 +26,13 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 For a quick start see the code below.
 ``` swift
 var photo: MBPhotoPicker = MBPhotoPicker()
-photo.photoCompletionHandler = { (image: UIImage!) -> Void in
+photo.onPhoto = { (image: UIImage!) -> Void in
 print("Selected image")
 }
-photo.cancelCompletionHandler = {
+photo.onCancel = {
 print("Cancel Pressed")
 }
-photo.errorCompletionHandler = { (error: MBPhotoPicker.ErrorPhotoPicker) -> Void in
+photo.onError = { (error) -> Void in
 print("Error: \(error.rawValue)")
 }
 photo.present(self)

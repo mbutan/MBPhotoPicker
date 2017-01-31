@@ -34,13 +34,13 @@ class ViewController: UIViewController {
             photo.popoverRect = self.photoButton.bounds // It's also default value
         }
         
-        photo.photoCompletionHandler = { (image: UIImage?) -> Void in
+        photo.onPhoto = { (image: UIImage?) -> Void in
             self.previewImageView.image = image;
         }
-        photo.cancelCompletionHandler = {
+        photo.onCancel = {
             print("Cancel Pressed")
         }
-        photo.errorCompletionHandler = { (error: MBPhotoPicker.ErrorPhotoPicker) in
+        photo.onError = { (error) in
             print("Error: \(error.rawValue)")
         }
     }

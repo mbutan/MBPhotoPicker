@@ -41,7 +41,7 @@ class ViewController: UIViewController {
             print("Cancel Pressed")
         }
         photo.onError = { (error) in
-            print("Error: \(error.rawValue)")
+            print("Error: \(error.name())")
         }
     }
     

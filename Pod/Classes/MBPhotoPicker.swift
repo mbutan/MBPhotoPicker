@@ -57,39 +57,61 @@ open class MBPhotoPicker: NSObject {
   /**
    List of callbacks variables
    */
-  open var onPhoto: ((_ image: UIImage?) -> Void)?
+  open var onPhoto: ((_ image: UIImage?) -> ())?
   
-  open var onPresented: (() -> Void)?
+  open var onPresented: (() -> ())?
   
-  open var onCancel: (() -> Void)?
+  open var onCancel: (() -> ())?
   
-  open var onError: ((_ error: ErrorPhotoPicker) -> Void)?
+  open var onError: ((_ error: ErrorPhotoPicker) -> ())?
   
   
   // MARK: Error's definition
-  public enum ErrorPhotoPicker: String {
-    case cameraNotAvailable = "Camera not available"
-    case libraryNotAvailable = "Library not available"
-    case accessDeniedCameraRoll = "Access denied to camera roll"
-    case entitlementiCloud = "Missing iCloud Capatability"
-    case wrongFileType = "Wrong file type"
-    case popoverTarget = "Missing property popoverTarget while iPad is run"
-    case other = "Other"
+  @objc public enum ErrorPhotoPicker: Int {
+    case cameraNotAvailable
+    case libraryNotAvailable
+    case accessDeniedToCameraRoll
+    case accessDeniedToPhoto
+    case entitlementiCloud
+    case wrongFileType
+    case popoverTarget
+    case other
+    
+    public func name() -> String {
+      switch self {
+      case .cameraNotAvailable:
+        return "Camera not available"
+      case .libraryNotAvailable:
+        return "Library not available"
+      case .accessDeniedToCameraRoll:
+        return "Access denied to camera roll"
+      case .accessDeniedToPhoto:
+        return "Access denied to photo library"
+      case .entitlementiCloud:
+        return "Missing iCloud Capatability"
+      case .wrongFileType:
+        return "Wrong file type"
+      case .popoverTarget:
+        return "Missing property popoverTarget while iPad is run"
+      case .other:
+        return "Other"
+      }
+    }
   }
   
   
   // MARK: Public
-  open func present() -> Void {
+  open func present() {
     let topController = UIApplication.shared.windows.first?.rootViewController
     present(topController!)
   }
   
-  open func present(_ controller: UIViewController!) -> Void {
+  open func present(_ controller: UIViewController!) {
     self.controller = controller
     
     let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .actionSheet)
     
-    let actionTakePhoto = UIAlertAction(title: self.localizeString(actionTitleTakePhoto), style: .default, handler: { (alert: UIAlertAction!) -> Void in
+    let actionTakePhoto = UIAlertAction(title: self.localizeString(actionTitleTakePhoto), style: .default, handler: { (alert: UIAlertAction!) in
       if UIImagePickerController.isSourceTypeAvailable(.camera) {
         self.presentImagePicker(.camera, topController: controller)
       } else {
@@ -97,7 +119,7 @@ open class MBPhotoPicker: NSObject {
       }
     })
     
-    let actionLibrary = UIAlertAction(title: self.localizeString(actionTitleLibrary), style: .default, handler: { (alert: UIAlertAction!) -> Void in
+    let actionLibrary = UIAlertAction(title: self.localizeString(actionTitleLibrary), style: .default, handler: { (alert: UIAlertAction!) in
       if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
         self.presentImagePicker(.photoLibrary, topController: controller)
       } else {
@@ -105,14 +127,14 @@ open class MBPhotoPicker: NSObject {
       }
     })
     
-    let actionLast = UIAlertAction(title: self.localizeString(actionTitleLastPhoto), style: .default, handler: { (alert: UIAlertAction!) -> Void in
-      self.lastPhotoTaken({ (image) -> Void in self.photoHandler(image) },
-                          errorHandler: { (error) -> Void in self.onError?(.accessDeniedCameraRoll) }
+    let actionLast = UIAlertAction(title: self.localizeString(actionTitleLastPhoto), style: .default, handler: { (alert: UIAlertAction!) in
+      self.lastPhotoTaken({ (image) in self.photoHandler(image) },
+                          errorHandler: { (error) in self.onError?(error) }
       )
     })
     
     
-    let actionCancel = UIAlertAction(title: self.localizeString(actionTitleCancel), style: allowDestructive ? .destructive : .cancel, handler: { (alert: UIAlertAction!) -> Void in
+    let actionCancel = UIAlertAction(title: self.localizeString(actionTitleCancel), style: allowDestructive ? .destructive : .cancel, handler: { (alert: UIAlertAction!) in
       self.onCancel?()
     })
     
@@ -122,7 +144,7 @@ open class MBPhotoPicker: NSObject {
     alert.addAction(actionCancel)
     
     if !self.disableEntitlements {
-      let actionOther = UIAlertAction(title: self.localizeString(actionTitleOther), style: .default, handler: { (alert: UIAlertAction!) -> Void in
+      let actionOther = UIAlertAction(title: self.localizeString(actionTitleOther), style: .default, handler: { (alert: UIAlertAction!) in
         let document = UIDocumentMenuViewController(documentTypes: [kUTTypeImage as String, kUTTypeJPEG as String, kUTTypePNG as String, kUTTypeBMP as String, kUTTypeTIFF as String], in: .import)
         document.delegate = self
         controller.present(document, animated: true, completion: nil)
@@ -150,7 +172,7 @@ open class MBPhotoPicker: NSObject {
       }
     }
     
-    controller.present(alert, animated: true) { () -> Void in
+    controller.present(alert, animated: true) { () in
       self.onPresented?()
     }
   }
@@ -184,7 +206,7 @@ open class MBPhotoPicker: NSObject {
     }
   }
   
-  func photoHandler(_ image: UIImage!) -> Void {
+  func photoHandler(_ image: UIImage!) {
     let resizedImage: UIImage = UIImage.resizeImage(image, newSize: self.resizeImage)
     self.onPhoto?(resizedImage)
   }
@@ -207,7 +229,7 @@ open class MBPhotoPicker: NSObject {
 
 extension MBPhotoPicker: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
   public func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-    picker.dismiss(animated: true) { () -> Void in
+    picker.dismiss(animated: true) { () in
       self.onCancel?()
     }
   }
@@ -232,7 +254,7 @@ extension MBPhotoPicker: UIDocumentPickerDelegate {
   public func documentPicker(_ controller: UIDocumentPickerViewController, didPickDocumentAt url: URL) {
     var error: NSError?
     let filerCordinator = NSFileCoordinator()
-    filerCordinator.coordinate(readingItemAt: url, options: .withoutChanges, error: &error, byAccessor: { (url: URL) -> Void in
+    filerCordinator.coordinate(readingItemAt: url, options: .withoutChanges, error: &error, byAccessor: { (url: URL) in
       if let data: Data = try? Data(contentsOf: url) {
         if data.isSupportedImageType() {
           if let image: UIImage = UIImage(data: data) {
@@ -267,9 +289,9 @@ extension MBPhotoPicker: UIDocumentMenuDelegate {
 
 
 extension MBPhotoPicker {
-  internal func lastPhotoTaken (_ completionHandler: @escaping (_ image: UIImage?) -> Void, errorHandler: @escaping (_ error: NSError?) -> Void) {
+  internal func lastPhotoTaken (_ completionHandler: @escaping (_ image: UIImage?) -> (), errorHandler: @escaping (_ error: ErrorPhotoPicker) -> ()) {
     
-    PHPhotoLibrary.requestAuthorization { (status: PHAuthorizationStatus) -> Void in
+    PHPhotoLibrary.requestAuthorization { (status: PHAuthorizationStatus) -> () in
       if (status == PHAuthorizationStatus.authorized) {
         let manager = PHImageManager.default()
         let fetchOptions = PHFetchOptions()
@@ -282,20 +304,20 @@ extension MBPhotoPicker {
         initialRequestOptions.resizeMode = .fast
         initialRequestOptions.deliveryMode = .fastFormat
         
-        manager.requestImageData(for: asset!, options: initialRequestOptions) { (data: Data?, title: String?, orientation: UIImageOrientation, info: [AnyHashable: Any]?) -> Void in
+        manager.requestImageData(for: asset!, options: initialRequestOptions) { (data: Data?, title: String?, orientation: UIImageOrientation, info: [AnyHashable: Any]?) -> () in
           guard let dataImage = data else {
-            errorHandler(nil)
+            errorHandler(.other)
             return
           }
           
           let image:UIImage = UIImage(data: dataImage)!
           
-          DispatchQueue.main.async(execute: { () -> Void in
+          DispatchQueue.main.async(execute: { () in
             completionHandler(image)
           })
         }
       } else {
-        errorHandler(nil)
+        errorHandler(.accessDeniedToPhoto)
       }
     }
   }

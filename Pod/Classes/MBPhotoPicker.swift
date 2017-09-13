@@ -235,12 +235,13 @@ extension MBPhotoPicker: UIImagePickerControllerDelegate, UINavigationController
   }
   
   public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-    if let image = info[UIImagePickerControllerOriginalImage] {
-      self.photoHandler(image as! UIImage)
-    } else {
-      self.onError?(.other)
-    }
-    picker.dismiss(animated: true, completion: nil)
+    picker.dismiss(animated: true, completion: {
+        if let image = info[UIImagePickerControllerOriginalImage] {
+            self.photoHandler(image as! UIImage)
+        } else {
+            self.onError?(.other)
+        }
+    })
     self.popoverController = nil
   }
   

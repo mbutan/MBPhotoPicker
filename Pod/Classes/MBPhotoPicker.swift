@@ -35,9 +35,9 @@ open class MBPhotoPicker: NSObject {
   
   open var disableEntitlements: Bool = false
   
-  open var cameraDevice: UIImagePickerControllerCameraDevice = .rear
+  open var cameraDevice: UIImagePickerController.CameraDevice = .rear
   
-  open var cameraFlashMode: UIImagePickerControllerCameraFlashMode = .auto
+  open var cameraFlashMode: UIImagePickerController.CameraFlashMode = .auto
   
   open var resizeImage: CGSize?
   
@@ -181,7 +181,7 @@ open class MBPhotoPicker: NSObject {
   internal weak var controller: UIViewController?
   
   var imagePicker: UIImagePickerController!
-  func presentImagePicker(_ sourceType: UIImagePickerControllerSourceType, topController: UIViewController!) {
+  func presentImagePicker(_ sourceType: UIImagePickerController.SourceType, topController: UIViewController!) {
     imagePicker = UIImagePickerController()
     imagePicker.sourceType = sourceType
     imagePicker.delegate = self
@@ -236,8 +236,8 @@ extension MBPhotoPicker: UIImagePickerControllerDelegate, UINavigationController
   
   public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
     picker.dismiss(animated: true, completion: {
-        if let image = info[UIImagePickerControllerOriginalImage] {
-            self.photoHandler(image as! UIImage)
+        if let image = info[UIImagePickerController.InfoKey.originalImage.rawValue] {
+            self.photoHandler(image as? UIImage)
         } else {
             self.onError?(.other)
         }
@@ -305,7 +305,7 @@ extension MBPhotoPicker {
         initialRequestOptions.resizeMode = .fast
         initialRequestOptions.deliveryMode = .fastFormat
         
-        manager.requestImageData(for: asset!, options: initialRequestOptions) { (data: Data?, title: String?, orientation: UIImageOrientation, info: [AnyHashable: Any]?) -> () in
+        manager.requestImageData(for: asset!, options: initialRequestOptions) { (data: Data?, title: String?, orientation: UIImage.Orientation, info: [AnyHashable: Any]?) -> () in
           guard let dataImage = data else {
             errorHandler(.other)
             return

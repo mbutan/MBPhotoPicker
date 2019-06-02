@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
     s.name             = "MBPhotoPicker"
-    s.version          = "0.2.4"
+    s.version          = "0.2.5"
     s.summary          = "Easy and quick in implementation Photo Picker, based on Slack's picker."
 
     s.description      = <<-DESC
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     s.author           = { "Marcin Butanowicz" => "m.butan@gmail.com" }
     s.source           = { :git => "https://github.com/mbutan/MBPhotoPicker.git", :tag => s.version.to_s }
 
-    s.platform     = :ios, '8.0'
+    s.platform     = :ios, '10.0'
     s.requires_arc = true
 
     s.source_files = 'Pod/Classes/**/*'

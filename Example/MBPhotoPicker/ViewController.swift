@@ -10,44 +10,45 @@ import UIKit
 import MBPhotoPicker
 
 class ViewController: UIViewController {
-    
-    @IBOutlet weak var photoButton: UIButton!
-    @IBOutlet weak var previewImageView: UIImageView!
-    lazy var photo = MBPhotoPicker()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //Initial setup
-        photo.disableEntitlements = false // If you don't want use iCloud entitlement just set this value True
-        photo.alertTitle = nil
-        photo.alertMessage = nil
-        photo.resizeImage = CGSize(width: 250, height: 150)
-        photo.allowDestructive = false
-        photo.allowEditing = false
-        photo.cameraDevice = .rear
-        photo.cameraFlashMode = .auto
-        
-        if UIDevice.current.userInterfaceIdiom == .pad {
-            photo.popoverTarget = self.photoButton!
-            photo.popoverDirection = .up
-            photo.popoverRect = self.photoButton.bounds // It's also default value
-        }
-        
-        photo.onPhoto = { (image: UIImage?) -> Void in
-            self.previewImageView.image = image;
-        }
-        photo.onCancel = {
-            print("Cancel Pressed")
-        }
-        photo.onError = { (error) in
-            print("Error: \(error.name())")
-        }
+
+  @IBOutlet weak var photoButton: UIButton!
+  @IBOutlet weak var previewImageView: UIImageView!
+
+  lazy var photo = MBPhotoPicker()
+
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
+    //Initial setup
+    photo.disableEntitlements = false // If you don't want use iCloud entitlement just set this value True
+    photo.alertTitle = nil
+    photo.alertMessage = nil
+    photo.resizeImage = CGSize(width: 250, height: 150)
+    photo.allowDestructive = false
+    photo.allowEditing = false
+    photo.cameraDevice = .rear
+    photo.cameraFlashMode = .auto
+
+    if UIDevice.current.userInterfaceIdiom == .pad {
+      photo.popoverTarget = self.photoButton!
+      photo.popoverDirection = .up
+      photo.popoverRect = self.photoButton.bounds // It's also default value
     }
-    
-    @IBAction func didTapPhotoPicker(_ sender: AnyObject) {
-        photo.present(self)
+
+    photo.onPhoto = { (image: UIImage?) in
+      self.previewImageView.image = image;
     }
-    
+    photo.onCancel = {
+      print("Cancel Pressed")
+    }
+    photo.onError = { (error) in
+      print("Error: \(error.name())")
+    }
+  }
+
+  @IBAction func didTapPhotoPicker(_ sender: AnyObject) {
+    photo.present(self)
+  }
+
 }
 

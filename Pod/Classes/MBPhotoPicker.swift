@@ -111,7 +111,7 @@ open class MBPhotoPicker: NSObject {
     
     let alert = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .actionSheet)
     
-    let actionTakePhoto = UIAlertAction(title: self.localizeString(actionTitleTakePhoto), style: .default, handler: { (alert: UIAlertAction!) in
+    let actionTakePhoto = UIAlertAction(title: self.localize(actionTitleTakePhoto), style: .default, handler: { (alert: UIAlertAction!) in
       if UIImagePickerController.isSourceTypeAvailable(.camera) {
         self.presentImagePicker(.camera, topController: controller)
       } else {
@@ -119,7 +119,7 @@ open class MBPhotoPicker: NSObject {
       }
     })
     
-    let actionLibrary = UIAlertAction(title: self.localizeString(actionTitleLibrary), style: .default, handler: { (alert: UIAlertAction!) in
+    let actionLibrary = UIAlertAction(title: self.localize(actionTitleLibrary), style: .default, handler: { (alert: UIAlertAction!) in
       if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
         self.presentImagePicker(.photoLibrary, topController: controller)
       } else {
@@ -127,14 +127,17 @@ open class MBPhotoPicker: NSObject {
       }
     })
     
-    let actionLast = UIAlertAction(title: self.localizeString(actionTitleLastPhoto), style: .default, handler: { (alert: UIAlertAction!) in
-      self.lastPhotoTaken({ (image) in self.photoHandler(image) },
-                          errorHandler: { (error) in self.onError?(error) }
+    let actionLast = UIAlertAction(title: self.localize(actionTitleLastPhoto), style: .default, handler: { (alert: UIAlertAction!) in
+      self.lastPhotoTaken({ image in
+        if let image = image {
+          self.photoHandler(image)
+        }
+      }, errorHandler: { (error) in self.onError?(error) }
       )
     })
     
     
-    let actionCancel = UIAlertAction(title: self.localizeString(actionTitleCancel), style: allowDestructive ? .destructive : .cancel, handler: { (alert: UIAlertAction!) in
+    let actionCancel = UIAlertAction(title: self.localize(actionTitleCancel), style: allowDestructive ? .destructive : .cancel, handler: { (alert: UIAlertAction!) in
       self.onCancel?()
     })
     
@@ -144,7 +147,7 @@ open class MBPhotoPicker: NSObject {
     alert.addAction(actionCancel)
     
     if !self.disableEntitlements {
-      let actionOther = UIAlertAction(title: self.localizeString(actionTitleOther), style: .default, handler: { (alert: UIAlertAction!) in
+      let actionOther = UIAlertAction(title: self.localize(actionTitleOther), style: .default, handler: { (alert: UIAlertAction!) in
         let document = UIDocumentMenuViewController(documentTypes: [kUTTypeImage as String, kUTTypeJPEG as String, kUTTypePNG as String, kUTTypeBMP as String, kUTTypeTIFF as String], in: .import)
         document.delegate = self
         controller.present(document, animated: true, completion: nil)
@@ -197,7 +200,7 @@ open class MBPhotoPicker: NSObject {
         self.onError?(.popoverTarget)
         return;
       }
-      
+
       self.popoverController = UIPopoverController(contentViewController: imagePicker)
       let rect = self.popoverRect ?? CGRect.zero
       self.popoverController?.present(from: rect, in: popover, permittedArrowDirections: self.popoverDirection, animated: true)
@@ -206,24 +209,23 @@ open class MBPhotoPicker: NSObject {
     }
   }
   
-  func photoHandler(_ image: UIImage!) {
+  func photoHandler(_ image: UIImage) {
     let resizedImage: UIImage = UIImage.resizeImage(image, newSize: self.resizeImage)
     self.onPhoto?(resizedImage)
   }
   
-  func localizeString(_ string: String!) -> String! {
+  func localize(_ string: String) -> String {
     var string = string
     let podBundle = Bundle(for: self.classForCoder)
     if let bundleURL = podBundle.url(forResource: "MBPhotoPicker", withExtension: "bundle") {
       if let bundle = Bundle(url: bundleURL) {
-        string = NSLocalizedString(string!, tableName: "Localizable", bundle: bundle, value: "", comment: "")
-        
+        string = NSLocalizedString(string, tableName: "Localizable", bundle: bundle, value: "", comment: "")
       } else {
         assertionFailure("Could not load the bundle")
       }
     }
     
-    return string!
+    return string
   }
 }
 
@@ -234,18 +236,18 @@ extension MBPhotoPicker: UIImagePickerControllerDelegate, UINavigationController
     }
   }
   
-  public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+  public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
     picker.dismiss(animated: true, completion: {
-        if let image = info[UIImagePickerController.InfoKey.originalImage.rawValue] {
-            self.photoHandler(image as? UIImage)
-        } else {
-            self.onError?(.other)
-        }
+      if let image = info[UIImagePickerController.InfoKey.originalImage.rawValue] as? UIImage {
+        self.photoHandler(image)
+      } else {
+        self.onError?(.other)
+      }
     })
     self.popoverController = nil
   }
   
-  public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+  public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String: AnyObject]?) {
     picker.dismiss(animated: true, completion: nil)
     self.popoverController = nil
   }
@@ -293,32 +295,33 @@ extension MBPhotoPicker {
   internal func lastPhotoTaken (_ completionHandler: @escaping (_ image: UIImage?) -> (), errorHandler: @escaping (_ error: ErrorPhotoPicker) -> ()) {
     
     PHPhotoLibrary.requestAuthorization { (status: PHAuthorizationStatus) -> () in
-      if (status == PHAuthorizationStatus.authorized) {
-        let manager = PHImageManager.default()
-        let fetchOptions = PHFetchOptions()
-        fetchOptions.sortDescriptors = [NSSortDescriptor(key:"creationDate", ascending: true)]
-        let fetchResult: PHFetchResult = PHAsset.fetchAssets(with: PHAssetMediaType.image, options: fetchOptions)
-        let asset: PHAsset? = fetchResult.lastObject
-        
-        let initialRequestOptions = PHImageRequestOptions()
-        initialRequestOptions.isSynchronous = true
-        initialRequestOptions.resizeMode = .fast
-        initialRequestOptions.deliveryMode = .fastFormat
-        
-        manager.requestImageData(for: asset!, options: initialRequestOptions) { (data: Data?, title: String?, orientation: UIImage.Orientation, info: [AnyHashable: Any]?) -> () in
-          guard let dataImage = data else {
-            errorHandler(.other)
-            return
-          }
-          
-          let image:UIImage = UIImage(data: dataImage)!
-          
-          DispatchQueue.main.async(execute: { () in
-            completionHandler(image)
-          })
-        }
-      } else {
+      guard status == PHAuthorizationStatus.authorized else {
         errorHandler(.accessDeniedToPhoto)
+        return
+      }
+
+      let manager = PHImageManager.default()
+      let fetchOptions = PHFetchOptions()
+      fetchOptions.sortDescriptors = [NSSortDescriptor(key:"creationDate", ascending: true)]
+      let fetchResult: PHFetchResult = PHAsset.fetchAssets(with: PHAssetMediaType.image, options: fetchOptions)
+      let asset: PHAsset? = fetchResult.lastObject
+
+      let initialRequestOptions = PHImageRequestOptions()
+      initialRequestOptions.isSynchronous = true
+      initialRequestOptions.resizeMode = .fast
+      initialRequestOptions.deliveryMode = .fastFormat
+
+      manager.requestImageData(for: asset!, options: initialRequestOptions) { (data: Data?, title: String?, orientation: UIImage.Orientation, info: [AnyHashable: Any]?) -> () in
+        guard let dataImage = data else {
+          errorHandler(.other)
+          return
+        }
+
+        let image: UIImage = UIImage(data: dataImage)!
+
+        DispatchQueue.main.async(execute: { () in
+          completionHandler(image)
+        })
       }
     }
   }
@@ -335,7 +338,7 @@ extension UIImage {
     size = CGSize(width: image.size.width*ratio, height: image.size.height*ratio)
     
     UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
-    image.draw(in: CGRect(origin: CGPoint.zero, size: size))
+    image.draw(in: CGRect(origin: .zero, size: size))
     
     let scaledImage: UIImage! = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()

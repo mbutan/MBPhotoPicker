@@ -5,8 +5,8 @@ Easy and quick in implementation Photo Picker, based on Slack's picker.
 ![picture alt](https://github.com/mbutan/MBPhotoPicker/blob/master/Assets/screenshot.png "MBPhotoPicker")
 
 ## Requirements
-* iOS 9.0+
-* Swift 3
+* iOS 10.0+
+* Swift 4.2
 * ARC
 * To happy full functionality, expand your Xcode's captabilities of iCloud entitlement (see at the attached example, or read more about [here](https://developer.apple.com/library/mac/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html))
 
@@ -26,14 +26,14 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 For a quick start see the code below.
 ``` swift
 var photo: MBPhotoPicker = MBPhotoPicker()
-photo.onPhoto = { (image: UIImage!) -> Void in
-print("Selected image")
+photo.onPhoto = { (image: UIImage!) in
+	print("Selected image")
 }
 photo.onCancel = {
-print("Cancel Pressed")
+	print("Cancel Pressed")
 }
-photo.onError = { (error) -> Void in
-print("Error: \(error.rawValue)")
+photo.onError = { (error) in
+	print("Error: \(error.rawValue)")
 }
 photo.present(self)
 ```
